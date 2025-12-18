@@ -44,10 +44,11 @@ def player_place_ships(grid):
         print_grid(grid, hide=False)
 
         try:
-            pos, orient = input(f"Ship {len(ships)+1}: ").split()
+            pos, orient = input(f"Ship {len(ships)+1}: ENTER FORMAT (<row>,<col> <H/V>): ").split()
             r, c = map(int, pos.split(","))
             orient = orient.upper()
         except:
+            print("Invalid input. Try again.")
             print_grid(grid, hide=False)
             continue
 
